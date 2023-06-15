@@ -1,0 +1,46 @@
+Dataset Overall
+In this work, we present a new data set for comprehensive scene analysis that incorporates multiple types of data. Specifically, we captured real-world video and audio data from a 360 panoramic camera and a stereo camera mounted on a pair of glasses, covering various daily activities. Utilizing this setup, we collected various data modalities including front-view video, panoramic video, egocentric monocular video, egocentric stereo video, normal audio, directional audio, and location (GPS) data. The captured data covers a broad range of scenarios and activities in real life, such as indoor, outdoor, campus, shopping centres, cafes, train stations, etc. To the best of our knowledge, this is the first database that covers as many data modalities and viewpoints as possible, mimicking how daily information is accessed in the real world. The introduction of this novel dataset aims to facilitate the understanding of real-world scenes from varying perspectives.
+
+The project page is here: https://x360dataset.github.io/
+
+The dataset can be downloaded from the project page.
+
+The dataset is released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+Dataset Structure
+
+├── Inside
+│ ├── scene name
+│ │ ├── scenario name
+│ │ │ ├── 360
+│ │ │ │ ├── 360_panorama_cut
+│ │ │ │ │ ├── 360_panorama_cut_{frame}.jpg
+│ │ │ │ ├── front_view_cut
+│ │ │ │ │ ├── front_view_cut_{frame}.jpg
+│ │ │ │ ├── vis
+│ │ │ │ ├── 360_panorama.mp4
+│ │ │ │ ├── front_view.mp4
+│ │ │ ├── Egocentric
+│ │ │ │ ├── clip 1
+│ │ │ │ │ ├── audios
+│ │ │ │ │ ├── binocular_cut
+│ │ │ │ │ │ ├── binocular_cut_{frame}.jpg
+│ │ │ │ │ ├── binocular.mp4
+│ │ │ │ │ ├── binocular.wav
+│ │ │ │ │ ├── cropped.mp4
+│ │ │ │ │ ├── monocular.mp4
+│ │ │ │ ├── ...
+│ │ │ ├── label.json
+
+Scene Categories:
+Inside: Pub, Kitchen, Social, Living Room, University, Station, Sports, Train, Concert, Museum, Shopping Center, WFH, Install
+Outside: Sports, Field, Busking, Celebration, Campus, Christmas Market, Street, Square, Park
+
+Temporal Segmentation Categories:
+Personal Care: dressing, hygiene practices, smoking
+Eating and Drinking: eating, drinking, smelling, pouring
+Household: housekeeping, preparing food, cooking, opening, moving things
+Caring and Helping: pushing, assisting
+Working: farming, selling, driving, reading, cleaning
+Socializing and Leisure: operating phone, clapping, laughing, coughing, speaking, playing instrument, moving things, playing, sitting, playing card games, dancing, standing, operating computer, alarming, set off firework
+Sports and Exercise: walking, workout
