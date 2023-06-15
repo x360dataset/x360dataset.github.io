@@ -44,6 +44,7 @@
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
 
@@ -176,7 +177,6 @@
 <!-- End paper abstract -->
 
 
-
 <!--&lt;!&ndash; Youtube video &ndash;&gt;-->
 <!--<section class="hero is-small is-light">-->
 <!--    <div class="hero-body">-->
@@ -234,25 +234,29 @@
                         Example of Egocentric Video
                     </h2>
                 </div>
-                <div class="item item-video2">
-                    <video poster="" id="video4" autoplay controls loop height="100%">
-                        <!-- Your video file here -->
-                        <source src="static/videos/360_panoramic.wav"
-                                type="video/mp4">
-                    </video>
-                    <h2 class="subtitle has-text-centered">
-                        Example of 360 Panoramic Audio
-                    </h2>
+                <div class="columns is-centered has-text-centered">
+                    <div class="item item-video2">
+                        <video poster="" id="video4" autoplay controls loop height="100%">
+                            <!-- Your video file here -->
+                            <source src="static/videos/360_panoramic.wav"
+                                    type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">
+                            Example of 360 Panoramic Audio
+                        </h2>
+                    </div>
                 </div>
-                <div class="item item-video2">
-                    <video poster="" id="video5" autoplay controls loop height="100%">
-                        <!-- Your video file here -->
-                        <source src="static/videos/binocular.wav"
-                                type="video/mp4">
-                    </video>
-                    <h2 class="subtitle has-text-centered">
-                        Example of Egocentric Audio
-                    </h2>
+                <div class="columns is-centered has-text-centered">
+                    <div class="item item-video2">
+                        <video poster="" id="video5" autoplay controls loop height="100%">
+                            <!-- Your video file here -->
+                            <source src="static/videos/binocular.wav"
+                                    type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">
+                            Example of gocentric Audio
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -267,23 +271,9 @@
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item">
                     <!-- Your image here -->
-                    <img src="static/images/round.jpg" alt="360° panoramic video"/>
+                    <img src="static/images/scenes_time.png" alt="Scenes duration"/>
                     <h2 class="subtitle has-text-centered">
-                        360° panoramic video
-                    </h2>
-                </div>
-                <div class="item">
-                    <!-- Your image here -->
-                    <img src="static/images/flat.jpg" alt="High resolution cut out front-view video"/>
-                    <h2 class="subtitle has-text-centered">
-                        High resolution cut out front-view video
-                    </h2>
-                </div>
-                <div class="item">
-                    <!-- Your image here -->
-                    <img src="static/images/first-person.jpg" alt="First-person binocular video"/>
-                    <h2 class="subtitle has-text-centered">
-                        First-person binocular video
+                        Scenes duration
                     </h2>
                 </div>
                 <div class="item">
@@ -293,12 +283,27 @@
                         Audio in Mel spectrogram
                     </h2>
                 </div>
-                <div class="item">
-                    <!-- Your image here -->
-                    <img src="static/images/teaser.png" alt="Directional audio localization"/>
-                    <h2 class="subtitle has-text-centered">
-                        Directional audio localization
-                    </h2>
+                <div class="columns is-centered has-text-centered">
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/seg_tree.png" alt="Temporal segmentation categories" height="40%"
+                             width="40%"/>
+                        <h2 class="subtitle has-text-centered">
+                            Temporal segmentation categories
+                        </h2>
+                    </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/num_of_action.png"
+                             alt="Comparison of temporal the number of action instances per video between existing datasets and ours"
+                             height="50%" width="50%"/>
+                        <h2 class="subtitle has-text-centered">
+                            Comparison of temporal the number of action instances per video between existing datasets
+                            and ours
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -314,11 +319,94 @@
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
                         <p>
-                            Download the <a href="https://1drv.ms/f/s!AkLEGRGu8-SMjBGM5H6MUQ1Mf1Iv" style="color: #3273dc">example</a>.
+                            Download the <a href="https://1drv.ms/f/s!AkLEGRGu8-SMjBGM5H6MUQ1Mf1Iv"
+                                            style="color: #3273dc">example</a>.
                         </p>
                         <p>
                             The full dataset will be available in the future.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Dataset Structure</h2>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <div class="tree">
+                            <ul>
+                                <li><i class="fa fa-folder-open"></i> Inside
+                                    <ul>
+                                        <li><i class="fa fa-folder-open"></i> Scene name
+                                            <ul>
+                                                <li><i class="fa fa-folder-open"></i> scenario name
+                                                    <ul>
+                                                        <li><i class="fa fa-folder-open"></i> 360
+                                                            <ul>
+                                                                <li><i class="fa fa-folder-open"></i> 360_panorama_cut
+                                                                    <ul>
+                                                                        <li><i class="fa fa-image"></i>
+                                                                            360_panorama_cut_{frame}.jpg
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><i class="fa fa-folder-open"></i> front_view_cut
+                                                                    <ul>
+                                                                        <li><i class="fa fa-image"></i>
+                                                                            front_view_cut_{frame}.jpg
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><i class="fa fa-video"></i> 360_panorama.mp4
+                                                                </li>
+                                                                <li><i class="fa fa-video"></i> front_view.mp4
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><i class="fa fa-folder-open"></i> Egocentric
+                                                            <ul>
+                                                                <li><i class="fa fa-folder-open"></i> clip 1
+                                                                    <ul>
+                                                                        <li><i class="fa fa-folder-open"></i> audios
+                                                                        </li>
+                                                                        <li><i class="fa fa-folder-open"></i>
+                                                                            binocular_cut
+                                                                            <ul>
+                                                                                <li><i class="fa fa-image"></i>
+                                                                                    binocular_cut_{frame}.jpg
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><i class="fa fa-video"></i> binocular.mp4
+                                                                        </li>
+                                                                        <li><i class="fa fa-file-audio"></i>
+                                                                            binocular.wav
+                                                                        </li>
+                                                                        <li><i class="fa fa-video"></i> cropped.mp4
+                                                                        </li>
+                                                                        <li><i class="fa fa-video"></i> monocular.mp4
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li> ...</li>
+                                                            </ul>
+                                                        </li>
+
+
+                                                    </ul>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,7 +444,11 @@
         <div class="columns is-centered">
             <div class="column is-8">
                 <div class="content">
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                            alt="Creative Commons License" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a><br/>This work is licensed
+                    under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                    Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
                     <br>
                     <br>
 
