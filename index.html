@@ -36,6 +36,7 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -43,6 +44,8 @@
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
 </head>
 
 <body>
@@ -67,7 +70,7 @@
                     </div>
 
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block">Anonymous Authors<br>NeurIPS 2023</span>
+                        <span class="author-block">Anonymous Authors<br>NeurIPS 2023 Datasets and Benchmarks Track</span>
                         <!--                        <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
                     </div>
 
@@ -125,23 +128,33 @@
 </section>
 
 
-<!-- Teaser video-->
-<!--<section class="hero teaser">-->
-<!--    <div class="container is-max-desktop">-->
-<!--        <div class="hero-body">-->
-<!--            <video poster="" id="tree" autoplay controls muted loop height="100%">-->
-<!--                &lt;!&ndash; Your video here &ndash;&gt;-->
-<!--                <source src="static/videos/banner_video.mp4"-->
-<!--                        type="video/mp4">-->
-<!--            </video>-->
-<!--            <h2 class="subtitle has-text-centered">-->
-<!--                Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,-->
-<!--                placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
-<!--            </h2>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!-- End teaser video -->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <video poster="" id="tree" controls muted autoplay loop height="100%">
+                <!-- Your video here -->
+                <source src="static/videos/teaser_video.webm"
+                        type="video/mp4">
+            </video>
+            <!--            <h2 class="subtitle has-text-centered">-->
+            <!--                Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,-->
+            <!--                placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
+            <!--            </h2>-->
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="static/images/flow%20figure.webp">
+            <!--            <h2 class="subtitle has-text-centered">-->
+            <!--                Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,-->
+            <!--                placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
+            <!--            </h2>-->
+        </div>
+    </div>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -189,7 +202,7 @@
 <!--                    <div class="publication-video">-->
 <!--                        &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
 <!--                        <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"-->
-<!--                                allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--                                allow=" encrypted-media" allowfullscreen></iframe>-->
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
@@ -205,9 +218,9 @@
             <h2 class="title is-3">Dataset Example</h2>
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item item-video1">
-                    <video poster="" id="video1" autoplay controls loop height="100%">
+                    <video poster="" id="video1" controls loop height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/360_panoramic_cropped.mp4"
+                        <source src="static/videos/360_panoramic.webm"
                                 type="video/mp4">
                     </video>
                     <h2 class="subtitle has-text-centered">
@@ -217,7 +230,7 @@
                 <div class="item item-video2">
                     <video poster="" id="video2" controls loop height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/front_view_cropped.mp4"
+                        <source src="static/videos/front_view.webm"
                                 type="video/mp4">
                     </video>
                     <h2 class="subtitle has-text-centered">
@@ -225,9 +238,9 @@
                     </h2>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video3" controls muted loop height="100%">\
+                    <video poster="" id="video3" controls loop height="100%">\
                         <!-- Your video file here -->
-                        <source src="static/videos/binocular_anonymized.mp4"
+                        <source src="static/videos/binocular.webm"
                                 type="video/mp4">
                     </video>
                     <h2 class="subtitle has-text-centered">
@@ -244,6 +257,10 @@
                         <h2 class="subtitle has-text-centered">
                             Example of 360 Panoramic Audio
                         </h2>
+                        <img src="static/images/Mel_360.png">
+                        <h2 class="subtitle has-text-centered">
+                            The Mel Spectrogram of the 360° Panoramic Audio
+                        </h2>
                     </div>
                 </div>
                 <div class="columns is-centered has-text-centered">
@@ -256,18 +273,103 @@
                         <h2 class="subtitle has-text-centered">
                             Example of Egocentric Audio
                         </h2>
+                        <img src="static/images/Mel_binocular.png">
+                        <h2 class="subtitle has-text-centered">
+                            The Mel Spectrogram of the Egocentric Audio
+                        </h2>
                     </div>
                 </div>
             </div>
+            <!--            <div class="column is-four-fifths">-->
+            <!--                <div class="content has-text-justified">-->
+            <!--                    <p>-->
+            <!--                        The Mel Spectrogram of the 360° Panoramic Audio and Egocentric Audio are shown below.-->
+            <!--                    </p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div id="results-carousel" class="carousel results-carousel">-->
+            <!--                <div class="item item-video1">-->
+            <!--                    <img src="static/images/Mel_360.png">-->
+            <!--                    <h2 class="subtitle has-text-centered">-->
+            <!--                        The Mel Spectrogram of the 360° Panoramic Audio-->
+            <!--                    </h2>-->
+            <!--                </div>-->
+            <!--                <div class="item item-video2">-->
+            <!--                    <img src="static/images/Mel_binocular.png">-->
+            <!--                    <h2 class="subtitle has-text-centered">-->
+            <!--                        The Mel Spectrogram of the Egocentric Audio-->
+            <!--                    </h2>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Panorama Preview</h2>
+            <div class="content has-text-justified">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                            <p>
+                                We have included a Panorama Preview to showcase the equirectangular projection applied
+                                to
+                                the panoramic video in the Dataset Example. The original spherical state of the video is
+                                demonstrated below, providing an initial view of its unaltered form before undergoing
+                                the
+                                projection process.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the viewer container must have a defined size -->
+            <div id="viewer" style="width: 80vw; height: 80vh; margin: 0 auto"></div>
+            <script>
+                const viewer = new PhotoSphereViewer.Viewer({
+                    container: document.querySelector('#viewer'),
+                    panorama: 'static/images/360_panoramic.jpg'
+                });
+            </script>
         </div>
     </div>
 </section>
 
 <!-- Image carousel -->
-<section class="hero is-small is-light">
+<section class="hero is-small">
     <div class="hero-body">
         <div class="container">
             <h2 class="title is-3">Dataset Analysis</h2>
+            <div class="content has-text-justified">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                            <p>
+                                We provide more examples of the dataset, including 360° Panoramic Video, Front-view
+                                Video,
+                                Egocentric Video, 360° Panoramic Audio, and Egocentric Audio.
+
+                                Our dataset comprises 1,450 videos. Among these, 222 videos were captured using
+                                360-degree cameras,
+                                while the remaining 1,228 were recorded with stereo cameras. To facilitate analysis and
+                                accessibility, these extended videos have been segmented into 16,368 shorter clips, each
+                                spanning
+                                approximately 10 seconds. In summary, these clips accumulate to a total duration of
+                                approximately
+                                152,383 seconds (around 42.33 hours), and the total number of frames is 5,792,634.<br>
+                                <br>
+                                The following figures provide data analysis of the dataset, including the duration of
+                                each scene,
+                                the number of action instances per video, and the number of action instances per scene.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item">
                     <!-- Your image here -->
@@ -304,7 +406,7 @@
 </section>
 <!-- End image carousel -->
 
-<section class="hero is-small">
+<section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container">
             <h2 class="title is-3">Download</h2>
@@ -312,8 +414,12 @@
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
                         <p>
-                            Download the <a href="https://1drv.ms/f/s!AkLEGRGu8-SMjBGM5H6MUQ1Mf1Iv"
-                                            style="color: #3273dc">example</a>.
+                            Download the <a
+                                href="https://www.dropbox.com/sh/94imr5hrs4n7mi9/AACaitEBEjNIIaCyU1aOBGnUa?dl=0"
+                                style="color: #3273dc">example</a>. (5 Video sets, 3 of which are selected from two
+                            Indoor scenes, and the other 2 are selected from two Outdoor scenes. Each video set contains
+                            360° Panoramic Video, Front-view Video, Egocentric Video, video and audio
+                            features.)
                         </p>
                         <p>
                             The full dataset will be released soon.
@@ -325,7 +431,7 @@
     </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="hero is-small">
     <div class="hero-body">
         <div class="container">
             <h2 class="title is-3">Dataset Structure</h2>
@@ -402,6 +508,761 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">More Examples</h2>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>
+                            We provide more examples of the dataset, one set for each scene. For website display,
+                            each video has been resized to 1920*960. The original video resolution is 5760*2880.
+                        </p>
+                        <p>
+                            The process of redacting Personally Identifiable Information (PII) on Egocentric Videos is
+                            ongoing. After the process is completed, we will update them on the website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+                    <h2 class="title is-4">Inside/Concert</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Concert" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Concert/02_Jersey_PlayingViolin_20221204_213315/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Concert" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Concert/02_Jersey_PlayingViolin_20221204_213315/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Inside/Install</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Install" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Install/01_Fujian_HangLantern_20230120_092753/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Install" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Install/01_Fujian_HangLantern_20230120_092753/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Inside/Kitchen</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Kitchen" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Kitchen/11_SZ_MakeCoffee2_20230130_072452/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Kitchen" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Kitchen/11_SZ_MakeCoffee2_20230130_072452/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+                    <h2 class="title is-4">Inside/LivingRoom</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/LivingRoom" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/LivingRoom/02_DIY_20220101_000000/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/LivingRoom" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/LivingRoom/02_DIY_20220101_000000/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Inside/Museum</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Museum" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Museum/01_JerseyZoo_butterfly_20221204_135931/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Museum" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Museum/01_JerseyZoo_butterfly_20221204_135931/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Inside/Pub</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Pub" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Pub/12_Shenzhen_ClamWait_20230106_042325/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Pub" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Pub/12_Shenzhen_ClamWait_20230106_042325/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+                    <h2 class="title is-4">Inside/ShoppingCenter</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/ShoppingCenter" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/ShoppingCenter/02_SZ_ShopUpStair_20230130_121918/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/ShoppingCenter" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/ShoppingCenter/02_SZ_ShopUpStair_20230130_121918/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Inside/Social</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Social" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Social/03_Harboune_ChatHousehold_20221201_175422/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Social" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Social/03_Harboune_ChatHousehold_20221201_175422/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Inside/Sports</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Sports" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Sports/02_fitness_mirror_20230106_092921/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Sports" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Sports/02_fitness_mirror_20230106_092921/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Inside/Station</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/Station" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Station/02_Euston_Indoor_20221205_211010/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/Station" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/Station/02_Euston_Indoor_20221205_211010/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Inside/Train</h2>
+                    <h2 class="subtitle has-text-centered">
+                        Waiting for the redaction of PII
+                    </h2>
+                    <!--                    <div id="results-carousel" class="carousel results-carousel">-->
+                    <!--                        <div class="item item-video1">-->
+                    <!--                            <center>-->
+                    <!--                                <video poster="" id="video1_Inside/Train" controls loop height="100%">-->
+                    <!--                                    &lt;!&ndash; Your video file here &ndash;&gt;-->
+                    <!--                                    <source src="static/videos/example/Inside/Train/03_Fujian_IntheCar_20230120_103605/360/360_panoramic_anonymized.webm"-->
+                    <!--                                            type="video/mp4">-->
+                    <!--                                </video>-->
+                    <!--                            </center>-->
+                    <!--                            <h2 class="subtitle has-text-centered">-->
+                    <!--                                360° Panoramic Video Clip (temporally cropped to 10s)-->
+                    <!--                            </h2>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="item item-video2">-->
+                    <!--                            <center>-->
+                    <!--                                <video poster="" id="video2_Inside/Train" controls loop height="100%">-->
+                    <!--                                    &lt;!&ndash; Your video file here &ndash;&gt;-->
+                    <!--                                    <source src="static/videos/example/Inside/Train/03_Fujian_IntheCar_20230120_103605/360/front_view_anonymized.webm"-->
+                    <!--                                            type="video/mp4">-->
+                    <!--                                </video>-->
+                    <!--                            </center>-->
+                    <!--                            <h2 class="subtitle has-text-centered">-->
+                    <!--                                Front-view Video Clip (temporally cropped to 10s)-->
+                    <!--                            </h2>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Inside/University</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/University" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/University/01_Bham_Graduation1_20221206_144853/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/University" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/University/01_Bham_Graduation1_20221206_144853/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Inside/WorkFromHome</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Inside/WFH" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/WFH/01_Fujian_Fujian_WFH_20230125_201048/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Inside/WFH" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Inside/WFH/01_Fujian_Fujian_WFH_20230125_201048/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Outside/Busking</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Busking" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Busking/01_Jersey_Choir_20221203_115407/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Busking" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Busking/01_Jersey_Choir_20221203_115407/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Outside/Campus</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Campus" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Campus/07_Bham_Underpass_20220101_000000/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Campus" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Campus/07_Bham_Underpass_20220101_000000/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Outside/Celebration</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Celebration" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Celebration/09_Fujian_Buda_20230122_120643/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Celebration" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Celebration/09_Fujian_Buda_20230122_120643/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Outside/Christmas_Market</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Christmas_Market" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Christmas_Market/05_Bham_Tesco_20221124_172510/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Christmas_Market" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Christmas_Market/05_Bham_Tesco_20221124_172510/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Outside/Field</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Field" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Field/02_Fujian_BackyardField_20230119_231842/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Field" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Field/02_Fujian_BackyardField_20230119_231842/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+                    <h2 class="title is-4">Outside/Nature</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Nature" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Nature/01_Spain_PicosdeEuropa_ViewingPlatform_20230703_121741/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Nature" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Nature/01_Spain_PicosdeEuropa_ViewingPlatform_20230703_121741/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Outside/Park</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Park" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Park/01_Cardiff_wonderland_20221129_201721/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Park" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Park/01_Cardiff_wonderland_20221129_201721/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+                    <h2 class="title is-4">Outside/Sports</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Sports" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Sports/03_SZ_Basketball_sideview_20230130_123654/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Sports" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Sports/03_SZ_Basketball_sideview_20230130_123654/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Outside/Square</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Square" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Square/03_Cardiff_CenterNight_20221129_171211/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Square" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Square/03_Cardiff_CenterNight_20221129_171211/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%">
+
+
+                    <h2 class="title is-4">Outside/Street</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-video1">
+                            <center>
+                                <video poster="" id="video1_Outside/Street" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Street/07_Shenzhen_Village_FiredNoodles_20230106_101339/360/360_panoramic_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                360° Panoramic Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                        <div class="item item-video2">
+                            <center>
+                                <video poster="" id="video2_Outside/Street" controls loop height="100%">
+                                    <!-- Your video file here -->
+                                    <source src="static/videos/example/Outside/Street/07_Shenzhen_Village_FiredNoodles_20230106_101339/360/front_view_anonymized.webm"
+                                            type="video/mp4">
+                                </video>
+                            </center>
+                            <h2 class="subtitle has-text-centered">
+                                Front-view Video Clip (temporally cropped to 10s)
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%"/>
             </div>
         </div>
     </div>
