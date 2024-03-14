@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="360+x Dataset">
+    <meta property="og:title" content="360+x Dataset"/>
+    <meta property="og:description" content="360+x Dataset"/>
+    <meta property="og:url" content="https://x360dataset.github.io/"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <!--    <meta property="og:image" content="static/image/your_banner_image.png"/>-->
+    <!--    <meta property="og:image:width" content="1200"/>-->
+    <!--    <meta property="og:image:height" content="630"/>-->
+
+
+    <meta name="twitter:title" content="360+x Dataset">
+    <meta name="twitter:description" content="360+x Dataset">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <!--    <meta name="twitter:image" content="static/images/scenes_time.png">-->
+    <!--    <meta name="twitter:card" content="summary_large_image">-->
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="360+x Dataset">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>360+x: A Panoptic Multi-modal Scene Understanding Dataset</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+
+    <script src="static/js/video_block.js"></script>
+    <style>
+        .team-section h2 {
+            font-size: 2em;
+        }
+
+        .member-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .member {
+            flex: 0 0 30%; /* each member will take up 30% of the container width */
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .member img {
+            border-radius: 50%; /* Makes the images round */
+            width: 100px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
+            margin-bottom: 10px;
+            display: block; /* Center image in its container */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .member p {
+            margin: 5px 0;
+        }
+
+        .logos {
+            margin-top: 20px;
+        }
+
+        .logos img {
+            height: 100px; /* Adjust as needed */
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <button onclick="window.history.back()" class="button is-primary is-rounded">
+                <span class="icon">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+                <span>Go Back to the Main Page</span>
+            </button>
+            <div style="padding: 10px"></div>
+            <h2 class="title is-3">More Examples</h2>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>
+                            We provide more examples of the dataset, one set for each scene. For website display,
+                            each video has been resized to 320p (640*320 for panoramic and binocular videos, 569*320
+                            for
+                            third-person front view video). The original video resolution is 5k (5760*2880 for
+                            panoramic and binocular videos, 1920*1080 for third-person front view video).
+                        </p>
+                        <!--                        <p>-->
+                        <!--                            The process of redacting Personally Identifiable Information (PII) on Egocentric Videos is-->
+                        <!--                            ongoing. After the process is completed, we will update them on the website.-->
+                        <!--                        </p>-->
+                    </div>
+                </div>
+            </div>
+            <div id="examples">
+                <div style="display: flex; justify-content: space-between">
+                    <div style="width: 30%">
+
+                        <h2 class="title is-4">Workspaces</h2>
+                        <div id="results-carousel" class="carousel results-carousel">
+                            <div class="item item-video1">
+                                <center>
+                                    <video poster="" id="video1_Workspaces" controls height="100%">
+                                        <!-- Your video file here -->
+                                        <source src="static/videos/example/Workspaces/360_panoramic.webm"
+                                                type="video/mp4">
+                                    </video>
+                                </center>
+                                <h2 class="subtitle has-text-centered">
+                                    360° Panoramic Video Clip (temporally cropped to 10s)
+                                </h2>
+                            </div>
+                            <div class="item item-video2">
+                                <center>
+                                    <video poster="" id="video2_Workspaces" controls height="100%">
+                                        <!-- Your video file here -->
+                                        <source src="static/videos/example/Workspaces/front_view.webm"
+                                                type="video/mp4">
+                                    </video>
+                                </center>
+                                <h2 class="subtitle has-text-centered">
+                                    Third-person front-view Video Clip (temporally cropped to 10s)
+                                </h2>
+                            </div>
+                            <div class="item item-video3">
+                                <center>
+                                    <video poster="" id="video3_Workspaces" controls height="100%">
+                                        <!-- Your video file here -->
+                                        <source src="static/videos/example/Workspaces/stereo.webm"
+                                                type="video/mp4">
+                                    </video>
+                                </center>
+
+                                <h2 class="subtitle has-text-centered">
+                                    Egocentric Video Clip
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="width: 30%"></div>
+                    <div style="width: 30%"></div>
+                </div>
+            </div>
+
+
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Agriculture___Rural', 'Agriculture & Rural', 'Artistic_Spaces', 'Artistic Spaces', 'Bars___Nightlife', 'Bars & Nightlife'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Dining___Food_Outlets', 'Dining & Food Outlets', 'Elevators___Escalators_Stairs', 'Elevators & Escalators', 'Historic___Religious_Sites', 'Historic & Religious Sites'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Hotel___Temporary_Stay', 'Hotel & Temporary Stay', 'Indoor_Educational_Spaces', 'Indoor Educational Spaces', 'Indoor_Entertainment_Venues', 'Indoor Entertainment Venues'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Indoor_Residential_Spaces', 'Indoor Residential Spaces', 'Indoor_Shops___Retail__Commercial', 'Indoor Shops & Retail & Commercial', 'Indoor_sports_venues', 'Indoor Sports Venues'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Kitchen', 'Kitchen', 'Nature', 'Nature', 'Open_Public_Spaces', 'Open Public Spaces'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Outdoor_Commercial___Markets_outside', 'Outdoor Commercial & Markets Outside', 'Outdoor_Residences___Living', 'Outdoor Residences & Living', 'Outdoor_Sports___Athletic_Fields', 'Outdoor Sports & Athletic Fields'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Outdoor_Transportation', 'Outdoor Transportation', 'Parks___Recreational_Areas', 'Parks & Recreational Areas', 'Public_Gathering___Conference_Spaces', 'Public Gathering & Conference Spaces'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Scientific_interior_space', 'Scientific Interior Space', 'Storage___Utility', 'Storage & Utility', 'Transportation_Interiors', 'Transportation Interiors'))
+            </script>
+            <script>
+                document.getElementById('examples').insertAdjacentHTML("beforebegin", video_block('Transportation_Stops', 'Transportation Stops', 'Urban_Constructions___street', 'Urban Constructions & street', 'Waterfronts___Water_Bodies', 'Waterfronts & Water Bodies'))
+            </script>
+            <!--            <script>-->
+            <!--                document.getElementById('examples').insertAdjacentHTML('beforeend', video_block('Workspaces', 'Workspaces', 'None', 'None', 'None', 'None'))-->
+            <!--            </script>-->
+        </div>
+    </div>
+</section>
+
+<!--&lt;!&ndash; Paper poster &ndash;&gt;-->
+<!--<section class="hero is-small is-light">-->
+<!--    <div class="hero-body">-->
+<!--        <div class="container">-->
+<!--            <h2 class="title">Poster</h2>-->
+
+<!--            <iframe src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--            </iframe>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash;End paper poster &ndash;&gt;-->
+
+
+<!--&lt;!&ndash;BibTex citation &ndash;&gt;-->
+<!--<section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--        <h2 class="title">BibTeX</h2>-->
+<!--        <pre><code>BibTex Code Here</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash;End BibTex citation &ndash;&gt;-->
+
+
+<footer class="footer" id="team">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <div class="member-container">
+                        <div class="member">
+                            <img src="static/images/hao.jpg" alt="hao chen">
+                            <p>Chen Hao</p>
+                        </div>
+                        <div class="member">
+                            <img src="static/images/yuqi.jpg" alt="yuqi hou">
+                            <p>Yuqi Hou</p>
+                        </div>
+                        <div class="member">
+                            <img src="static/images/chenyuan.jpg" alt="chenyuan qu">
+                            <p>Chenyuan Qu</p>
+                        </div>
+                        <div class="member">
+                            <img src="static/images/anonymity.jpg" alt="Irene Testini">
+                            <p>Irene Testini</p>
+                        </div>
+                        <div class="member">
+                            <img src="static/images/xiaohan.jpg" alt="Xiaohan Hong">
+                            <p>Xiaohan Hong</p>
+                        </div>
+                        <div class="member">
+                            <img src="static/images/jiao-jianbo.jpg" alt="jianbo">
+                            <p>Jianbo Jiao</p>
+                        </div>
+                        <!-- Repeat for each team member -->
+                        <div class="logos">
+                            <!-- Repeat for each logo -->
+                            <img src="static/images/mix_group.png" alt="mix_group" />
+                            <img src="static/images/2.-Positive-University-of-Birmingham-logo-on-white-background.jpg"
+                                 alt="UOB" />
+                            <img src="static/images/baskerville.svg" alt="baskerville" />
+
+
+                            <!-- Repeat for other logos -->
+                        </div>
+                    </div>
+
+
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                            alt="Creative Commons License" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a><br/>This work is licensed
+                    under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                    Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                    <br>
+                    <br>
+
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic
+                        Project Page Template</a>.
+                        <!--                        You are free to borrow the of this website, we just ask that you link back to this page in the-->
+                        <!--                        footer. <br> This website is licensed under a <a rel="license"-->
+                        <!--                                                                         href="http://creativecommons.org/licenses/by-sa/4.0/"-->
+                        <!--                                                                         target="_blank">Creative-->
+                        <!--                        Commons Attribution-ShareAlike 4.0 International License</a>.-->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
