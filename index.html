@@ -170,6 +170,19 @@
             vertical-align: middle;
         }
 
+        @keyframes rotate3D {
+            0% {
+                transform: perspective(500px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(500px) rotateY(360deg);
+            }
+        }
+
+        .rotating-text-3d {
+            display: inline-block;
+            animation: rotate3D 5s linear infinite;
+        }
 
     </style>
 </head>
@@ -179,7 +192,7 @@
 
 <div class="navbar">
     <a style="font-size: 2rem"
-       href="#top"><b><i>360+x</i></b></a>
+       href="#top"><div class="rotating-text-3d"><b><i>360+x</i></b></div></a>
     <div class="navbar-right">
         <a href="#example" class="hover-underline-animation">Example</a>
         <a href="#Statistics" class="hover-underline-animation">Statistics</a>
