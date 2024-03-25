@@ -9,7 +9,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video1_${categoryName_1}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_1}/360_panoramic.webm"
+                        <source src="static/videos/example/${categoryName_1}/360_panoramic.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -21,7 +21,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video2_${categoryName_1}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_1}/front_view.webm"
+                        <source src="static/videos/example/${categoryName_1}/front_view.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -33,7 +33,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video3_${categoryName_1}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_1}/stereo.webm"
+                        <source src="static/videos/example/${categoryName_1}/stereo.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -52,7 +52,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video1_${categoryName_2}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_2}/360_panoramic.webm"
+                        <source src="static/videos/example/${categoryName_2}/360_panoramic.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -64,7 +64,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video2_${categoryName_2}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_2}/front_view.webm"
+                        <source src="static/videos/example/${categoryName_2}/front_view.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -76,7 +76,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video3_${categoryName_2}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_2}/stereo.webm"
+                        <source src="static/videos/example/${categoryName_2}/stereo.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -95,7 +95,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video1_${categoryName_3}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_3}/360_panoramic.webm"
+                        <source src="static/videos/example/${categoryName_3}/360_panoramic.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -107,7 +107,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video2_${categoryName_3}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_3}/front_view.webm"
+                        <source src="static/videos/example/${categoryName_3}/front_view.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
@@ -119,7 +119,7 @@ function video_block(categoryName_1, name_1, categoryName_2, name_2,  categoryNa
                 <center>
                     <video poster="" id="video3_${categoryName_3}" controls height="100%">
                         <!-- Your video file here -->
-                        <source src="static/videos/example/${categoryName_3}/stereo.webm"
+                        <source src="static/videos/example/${categoryName_3}/stereo.mp4"
                                 type="video/mp4">
                     </video>
                 </center>
