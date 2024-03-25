@@ -192,7 +192,9 @@
 
 <div class="navbar">
     <a style="font-size: 2rem"
-       href="#top"><div class="rotating-text-3d"><b><i>360+x</i></b></div></a>
+       href="#top">
+        <div class="rotating-text-3d"><b><i>360+x</i></b></div>
+    </a>
     <div class="navbar-right">
         <a href="#example" class="hover-underline-animation">Example</a>
         <a href="#Statistics" class="hover-underline-animation">Statistics</a>
@@ -236,14 +238,14 @@
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><a href="https://mix.jianbojiao.com/"  target="_blank">MIx Group</a>, University of Birmingham</span>
+                            <span class="author-block"><a href="https://mix.jianbojiao.com/"
+                                                          target="_blank">MIx Group</a>, University of Birmingham</span>
                             <div style="display: flex; justify-content: space-around">
                                 <span class="eql-cntrb" style="font-size: 1.25rem!important"><br><small>Computer Vision and Pattern Recognition Conference (CVPR) 2024</small></span>
                             </div>
 
 
                         </div>
-
 
 
                         <!--                    <div class="column has-text-centered">-->
@@ -334,12 +336,15 @@
                 <div class="content has-text-justified">
                     <p>
 
-                        <b><i>360+x</i> dataset</b> introduces a unique panoptic perspective to scene understanding, differentiating itself from existing datasets, by offering multiple viewpoints and modalities, captured from a variety of scenes. Our dataset contains:
+                        <b><i>360+x</i> dataset</b> introduces a unique panoptic perspective to scene understanding,
+                        differentiating itself from existing datasets, by offering multiple viewpoints and modalities,
+                        captured from a variety of scenes. Our dataset contains:
 
 
                     </p>
                     <ul>
-                        <li><b>2,152 multi-model videos </b> captured by 360° cameras and Spectacles cameras (8,579k frames in total)
+                        <li><b>2,152 multi-model videos </b> captured by 360° cameras and Spectacles cameras (8,579k
+                            frames in total)
 
                         </li>
                         <li>
@@ -639,71 +644,84 @@
                         </p>
 
                         <p>
-                            To accessing our dataset, please fill this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeis3NZQftWrqv5WsUzqzA1lakrQ2nkGIwzHl4_hWKhU2QS7Q/viewform?usp=sf_link" target="_blank" style="color: #1d72aa">ACCESS FORM </a> and the further instruction will send to your email address shortly.
+                            To accessing our dataset, please fill this <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeis3NZQftWrqv5WsUzqzA1lakrQ2nkGIwzHl4_hWKhU2QS7Q/viewform?usp=sf_link"
+                                target="_blank" style="color: #1d72aa">ACCESS FORM </a> and the further instruction will
+                            send to your email address shortly.
 
                         </p>
                         <div class="tree">
-                            <ul>
-                                <li><i class="fa fa-archive"></i> 360x_dataset_original_resolution.zip
-                                    <ul>
-                                        <li><i class="fa fa-file"></i> index.json </li>
-                                        <li><i class="fa fa-folder-open"></i> panoramic</li>
-                                            <ul>
-                                                <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                                <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                                <li>...</li>
-                                            </ul>
-                                        <li><i class="fa fa-folder-open"></i> binocular</li>
-                                        <ul>
-                                            <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                            <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                            <li>...</li>
-                                        </ul>
-                                        <li><i class="fa fa-folder-open"></i> third_person</li>
-                                        <ul>
-                                            <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                            <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                            <li>...</li>
-                                        </ul>
-                                    </ul>
+                            <details>
+                                <summary><i class="fa fa-archive"></i> 360x_dataset_original_resolution.zip
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSeis3NZQftWrqv5WsUzqzA1lakrQ2nkGIwzHl4_hWKhU2QS7Q/viewform?usp=sf_link"
+                                        target="_blank" style="color: #1d72aa">Download</a></summary>
 
-                                </li>
-                                <li><i class="fa fa-archive"></i> annotation.zip (Coming Soon)
+                                <ul>
+                                    <li><i class="fa fa-file"></i> index.json</li>
+                                    <li><i class="fa fa-folder-open"></i> panoramic</li>
                                     <ul>
-                                        <li><i class="fa fa-file"></i> classes.json</li>
-                                        <li><i class="fa fa-folder-open"></i> activity_segmentation</li>
-                                        <ul>
-                                            <li><i class="fa fa-file"></i> 0000001.json</li>
-                                            <li><i class="fa fa-file"></i> 0000002.json</li>
-                                            <li>...</li>
-                                        </ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
                                     </ul>
-                                </li>
-                                <li><i class="fa fa-archive"></i> 360x_dataset_low_resolution.zip
+                                    <li><i class="fa fa-folder-open"></i> binocular</li>
                                     <ul>
-                                        <li><i class="fa fa-file"></i> index.json </li>
-                                        <li><i class="fa fa-folder-open"></i> panoramic</li>
-                                        <ul>
-                                            <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                            <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                            <li>...</li>
-                                        </ul>
-                                        <li><i class="fa fa-folder-open"></i> binocular</li>
-                                        <ul>
-                                            <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                            <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                            <li>...</li>
-                                        </ul>
-                                        <li><i class="fa fa-folder-open"></i> third_person</li>
-                                        <ul>
-                                            <li><i class="fa fa-video"></i> 0000001.mp4</li>
-                                            <li><i class="fa fa-video"></i> 0000002.mp4</li>
-                                            <li>...</li>
-                                        </ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
                                     </ul>
+                                    <li><i class="fa fa-folder-open"></i> third_person</li>
+                                    <ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
+                                    </ul>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary><i class="fa fa-archive"></i> annotation.zip
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSeis3NZQftWrqv5WsUzqzA1lakrQ2nkGIwzHl4_hWKhU2QS7Q/viewform?usp=sf_link"
+                                        target="_blank" style="color: #1d72aa">Download</a></summary>
+                                <ul>
+                                    <li><i class="fa fa-file"></i> classes.json</li>
+                                    <li><i class="fa fa-folder-open"></i> activity_segmentation</li>
+                                    <ul>
+                                        <li><i class="fa fa-file"></i> 0000001.json</li>
+                                        <li><i class="fa fa-file"></i> 0000002.json</li>
+                                        <li>...</li>
+                                    </ul>
+                                </ul>
+                            </details>
 
-                                </li>
-                            </ul>
+                            <details>
+                                <summary><i class="fa fa-archive"></i> 360x_dataset_low_resolution.zip
+                                    <a
+                                        href="https://huggingface.co/datasets"
+                                        target="_blank" style="color: #1d72aa">Download</a></summary>
+                                <ul>
+                                    <li><i class="fa fa-file"></i> index.json</li>
+                                    <li><i class="fa fa-folder-open"></i> panoramic</li>
+                                    <ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
+                                    </ul>
+                                    <li><i class="fa fa-folder-open"></i> binocular</li>
+                                    <ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
+                                    </ul>
+                                    <li><i class="fa fa-folder-open"></i> third_person</li>
+                                    <ul>
+                                        <li><i class="fa fa-video"></i> 0000001.mp4</li>
+                                        <li><i class="fa fa-video"></i> 0000002.mp4</li>
+                                        <li>...</li>
+                                    </ul>
+                                </ul>
+                            </details>
 
 
                         </div>
@@ -789,10 +807,13 @@
                         <!-- Repeat for each team member -->
                         <div class="logos">
                             <!-- Repeat for each logo -->
-                            <a href="https://mix.jianbojiao.com/"><img src="static/images/mix_group.png" alt="mix_group"/></a>
-                            <a href="https://www.birmingham.ac.uk/"><img src="static/images/2.-Positive-University-of-Birmingham-logo-on-white-background.jpg"
-                                 alt="UOB"/></a>
-                            <a href="https://www.baskerville.ac.uk/"><img src="static/images/baskerville.svg" alt="baskerville"/></a>
+                            <a href="https://mix.jianbojiao.com/"><img src="static/images/mix_group.png"
+                                                                       alt="mix_group"/></a>
+                            <a href="https://www.birmingham.ac.uk/"><img
+                                    src="static/images/2.-Positive-University-of-Birmingham-logo-on-white-background.jpg"
+                                    alt="UOB"/></a>
+                            <a href="https://www.baskerville.ac.uk/"><img src="static/images/baskerville.svg"
+                                                                          alt="baskerville"/></a>
 
 
                             <!-- Repeat for other logos -->
